@@ -21,3 +21,6 @@ RUN makepkg -sri --noconfirm
 
 # Install stuffs for code generation
 RUN pikaur -S castxml-git --noconfirm --noedit
+
+# Switch back to root user
+USER root
