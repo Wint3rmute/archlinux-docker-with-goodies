@@ -2,7 +2,7 @@ FROM archlinux:latest
 
 RUN pacman -Syu --noconfirm
 
-RUN pacman -S gcc make cmake git python-virtualenv python-pip which astyle sudo --noconfirm
+RUN pacman -S gcc make cmake git python-virtualenv python-pip which astyle sudo socat doxygen --noconfirm
 RUN pacman -S base-devel --noconfirm
 
 # Create a user to run non-root commands
