@@ -1,9 +1,6 @@
 FROM archlinux:latest
 
-RUN pacman -Syu --noconfirm
-
-RUN pacman -S gcc make cmake git python-virtualenv python-pip which astyle sudo socat doxygen --noconfirm
-RUN pacman -S base-devel --noconfirm
+RUN pacman -Syu base-devel gcc make cmake git python-virtualenv python-pip which astyle sudo socat doxygen --noconfirm
 
 # Create a user to run non-root commands
 RUN useradd -m user
