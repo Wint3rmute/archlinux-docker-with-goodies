@@ -5,8 +5,7 @@ COPY scripts/install_pacman_packages.sh /
 RUN /install_pacman_packages.sh
 
 # Copy my dead simple aur helper to /usr/bin
-COPY scripts/aur_helper.sh /
-RUN /usr/bin/aur_helper
+COPY scripts/aur_helper.sh /usr/bin/aur_helper
 
 # Create a user to run non-root commands
 RUN useradd -m user
