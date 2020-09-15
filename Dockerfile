@@ -1,8 +1,12 @@
 FROM archlinux:latest
 
 # Install my most-used packages
-COPY install_pacman_packages.sh /
+COPY scripts/install_pacman_packages.sh /
 RUN /install_pacman_packages.sh
+
+# Copy my dead simple aur helper to /usr/bin
+COPY scripts/aur_helper.sh /
+RUN /usr/bin/aur_helper
 
 # Create a user to run non-root commands
 RUN useradd -m user
@@ -10,13 +14,4 @@ RUN useradd -m user
 # Grant no-password sudo access to the user
 RUN echo "user ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 
-USER user
-WORKDIR /home/user
-
-RUN git clone https://aur.archlinux.org/pikaur.git
-WORKDIR /home/user/pikaur
-RUN makepkg -sri --noconfirm
-
-# Switch back to root user
-USER root
 WORKDIR /
