@@ -1,6 +1,8 @@
 FROM archlinux:latest
 
-RUN pacman -Syu base-devel gcc make cmake git python-virtualenv python-pip which astyle sudo socat doxygen --noconfirm
+# Install my most-used packages
+COPY install_pacman_packages.sh /
+RUN /install_pacman_packages.sh
 
 # Create a user to run non-root commands
 RUN useradd -m user
