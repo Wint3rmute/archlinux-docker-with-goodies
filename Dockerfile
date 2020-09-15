@@ -21,5 +21,9 @@ RUN makepkg -sri --noconfirm
 # Install stuffs for code generation
 RUN pikaur -S castxml-git --noconfirm --noedit
 
+# Mosquitto libraries
+RUN pikaur -S paho-mqtt-c-git paho-mqtt-cpp-git
+
 # Switch back to root user
 USER root
+WORKDIR /
