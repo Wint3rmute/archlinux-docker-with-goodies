@@ -22,7 +22,7 @@ RUN makepkg -sri --noconfirm
 RUN pikaur -S castxml-git --noconfirm --noedit
 
 # Mosquitto libraries
-RUN pikaur -S paho-mqtt-c-git paho-mqtt-cpp-git
+RUN pikaur -S paho-mqtt-c-git paho-mqtt-cpp-git --noconfirm --noedit
 
 # Switch back to root user
 USER root
