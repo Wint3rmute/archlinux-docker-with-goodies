@@ -12,6 +12,10 @@ cmake ..
 make
 make install
 
+## Cleanup
+cd /tmp
+rm -rf libzmq
+
 # Install cpp headers for zmq
 
 cd /tmp
@@ -25,3 +29,8 @@ cd build
 cmake ..
 make
 make install
+
+cd /tmp
+rm -rf cppzmq
+
+## Cleanup

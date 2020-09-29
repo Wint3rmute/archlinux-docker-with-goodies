@@ -19,4 +19,5 @@ RUN /install_libcsp.sh
 COPY scripts/install_zmq.sh /install_zmq.sh
 RUN ./install_zmq.sh
 
+USER root
 WORKDIR /
