@@ -4,3 +4,4 @@
 
 Arch Linux docker image extended with my favourite tools, used in my CI jobs.
 
+[Docker Hub link](https://hub.docker.com/r/wnt3rmute/archlinux-with-goodies)
