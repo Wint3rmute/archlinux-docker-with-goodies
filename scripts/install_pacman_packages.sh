@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 AUR_PACKAGES="base-devel"
-DEVEL_PACKAGES="gcc make cmake git"
+DEVEL_PACKAGES="gcc make cmake git clang"
 PYTHON_PACKAGES="python-virtualenv python-pip"
 DEVEL_UTILITIES="astyle doxygen socat"
 GENERAL_UTILITIES="psmisc which sudo wget openssh"
